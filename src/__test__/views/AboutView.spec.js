@@ -21,6 +21,8 @@ describe('Navegacion mediante VueRouter', async () => {
     routerTest.push({ name: 'about' })
     /**Espera a que la vista AbouView haya renderizado*/
     await routerTest.isReady()
+
+    /**En el ciclo de vida de montar la app, monta el wrapper que hace de envoltura de la aplicacion en este caso es App */
     const wrapper = mount(App, {
       global: {
         plugins: [routerTest]
