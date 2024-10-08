@@ -3,8 +3,6 @@ import { createPinia, setActivePinia } from 'pinia'
 
 import { useCounterStore } from '@/stores/counter'
 
-import { mount } from '@vue/test-utils'
-
 describe('useCounter', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
@@ -21,6 +19,7 @@ describe('useCounter', () => {
     initialCounter.increment()
     expect(initialCounter.count).toBe(1)
   })
+
   it('Disminuir contador', () => {
     const initialCounter = useCounterStore()
     initialCounter.decrement()
